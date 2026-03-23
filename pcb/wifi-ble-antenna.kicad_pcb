@@ -3,7 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "9.0")
 	(general
-		(thickness 1.6)
+		(thickness 1.6062)
 		(legacy_teardrops no)
 	)
 	(paper "A4")
@@ -15,6 +15,8 @@
 	)
 	(layers
 		(0 "F.Cu" signal)
+		(4 "In1.Cu" signal)
+		(6 "In2.Cu" signal)
 		(2 "B.Cu" signal)
 		(9 "F.Adhes" user "F.Adhesive")
 		(11 "B.Adhes" user "B.Adhesive")
@@ -38,17 +40,24 @@
 		(41 "User.2" user)
 		(43 "User.3" user)
 		(45 "User.4" user)
+		(47 "User.5" user)
+		(49 "User.6" user)
+		(51 "User.7" user)
+		(53 "User.8" user)
+		(55 "User.9" user)
 	)
 	(setup
 		(stackup
 			(layer "F.SilkS"
 				(type "Top Silk Screen")
+				(color "White")
 			)
 			(layer "F.Paste"
 				(type "Top Solder Paste")
 			)
 			(layer "F.Mask"
 				(type "Top Solder Mask")
+				(color "Black")
 				(thickness 0.01)
 			)
 			(layer "F.Cu"
@@ -56,10 +65,35 @@
 				(thickness 0.035)
 			)
 			(layer "dielectric 1"
-				(type "core")
-				(thickness 1.51)
+				(type "prepreg")
+				(color "FR4 natural")
+				(thickness 0.2104)
 				(material "FR4")
-				(epsilon_r 4.5)
+				(epsilon_r 4.4)
+				(loss_tangent 0.02)
+			)
+			(layer "In1.Cu"
+				(type "copper")
+				(thickness 0.0152)
+			)
+			(layer "dielectric 2"
+				(type "core")
+				(color "FR4 natural")
+				(thickness 1.065)
+				(material "FR4")
+				(epsilon_r 4.6)
+				(loss_tangent 0.02)
+			)
+			(layer "In2.Cu"
+				(type "copper")
+				(thickness 0.0152)
+			)
+			(layer "dielectric 3"
+				(type "prepreg")
+				(color "FR4 natural")
+				(thickness 0.2104)
+				(material "FR4")
+				(epsilon_r 4.4)
 				(loss_tangent 0.02)
 			)
 			(layer "B.Cu"
@@ -68,6 +102,7 @@
 			)
 			(layer "B.Mask"
 				(type "Bottom Solder Mask")
+				(color "Black")
 				(thickness 0.01)
 			)
 			(layer "B.Paste"
@@ -75,6 +110,7 @@
 			)
 			(layer "B.SilkS"
 				(type "Bottom Silk Screen")
+				(color "White")
 			)
 			(copper_finish "None")
 			(dielectric_constraints no)
@@ -123,5 +159,1345 @@
 		)
 	)
 	(net 0 "")
+	(net 1 "GND")
+	(net 2 "Net-(C1-Pad2)")
+	(net 3 "Net-(E1-SIG)")
+	(net 4 "Net-(J1-Pad1)")
+	(footprint "DW-footprints:Conn_SMA_BWSMA-KE-P001"
+		(layer "F.Cu")
+		(uuid "22e4df21-d5b7-4718-8e8c-4ffc03c46985")
+		(at 122.2 105 90)
+		(descr "SMA connector, SMD")
+		(tags "CONNECTOR")
+		(property "Reference" "J1"
+			(at 4.45 2.2 180)
+			(layer "F.SilkS")
+			(uuid "3733fa2d-6318-4596-82cf-5ee4448f1c05")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Value" "BWSMA-KE-P001"
+			(at 4.5 1.27 90)
+			(layer "F.Fab")
+			(uuid "834b4bfe-600c-4c90-9d33-e285baff027d")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C496550.pdf"
+			(at -0.025 0.505 90)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9afda0ee-507a-4d39-ab4d-e1bdf5432cde")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Description" "Female SMA connector, SMD, 50Ω, 0-6GHz, IL 0.15dB"
+			(at -3.1 9.799999 90)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "126aea4f-6c98-4794-b329-9f5c9cf64aa6")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify right top)
+			)
+		)
+		(property "Manufacturer" "BAT WIRELESS"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a08e43d8-1a7f-41c6-be57-b3c291625310")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "BWSMA-KE-P001"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cd12ad80-da3f-436e-9fe8-608d298b63a5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C496550"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "53a840cf-38e1-4c77-abdf-b2d86ab620d0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/a82ac7c0-8207-4441-b264-33ef5a7c7630")
+		(sheetname "/")
+		(sheetfile "wifi-ble-antenna.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 7.5 -2.2)
+			(end -7.5 -2.2)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "Dwgs.User")
+			(uuid "ef9d764e-9fb0-4016-874c-4289aa539610")
+		)
+		(fp_poly
+			(pts
+				(xy -4.36 -11.9) (xy 4.36 -11.9) (xy 4.36 2.199999) (xy -4.36 2.199999)
+			)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "6ee25393-f30d-407b-a95e-65d4c409f897")
+		)
+		(fp_poly
+			(pts
+				(xy -2.7 -11.7) (xy 2.7 -11.7) (xy 2.7 -3.7) (xy -2.7 -3.7)
+			)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "9ed8b222-e2d4-4fac-b4ad-23e9481fa7aa")
+		)
+		(fp_poly
+			(pts
+				(xy -3.25 -3.7) (xy 3.25 -3.7) (xy 3.25 -2.2) (xy -3.25 -2.2)
+			)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "2d4275bd-4081-4d71-84a0-d1f15f3ec7d6")
+		)
+		(fp_poly
+			(pts
+				(xy 2.1 -2.2) (xy 3 -2.2) (xy 3 1.8) (xy 2.1 1.8)
+			)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "444fdb54-367e-4e7e-b99f-24d8ebc6d721")
+		)
+		(fp_poly
+			(pts
+				(xy -0.475 -2.2) (xy 0.475 -2.2) (xy 0.475 1.8) (xy -0.475 1.8)
+			)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "9fc5ff93-bb08-494e-bdf8-651442402230")
+		)
+		(fp_poly
+			(pts
+				(xy -3 -2.2) (xy -2.1 -2.2) (xy -2.1 1.8) (xy -3 1.8)
+			)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "7cb05ae5-88f3-46b5-b99d-6016d323402d")
+		)
+		(fp_text user "PCB Edge"
+			(at 0 -3.27 90)
+			(layer "Dwgs.User")
+			(uuid "02d70c30-3b59-4533-aff1-935b7d94db3b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd rect
+			(at 0 0 90)
+			(size 1.78 4)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 4 "Net-(J1-Pad1)")
+			(pinfunction "1")
+			(pintype "passive")
+			(uuid "f99601ad-c2be-4e13-aaef-062a651e5733")
+		)
+		(pad "2" smd rect
+			(at -3.159999 0 90)
+			(size 2 4)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 1 "GND")
+			(pinfunction "2")
+			(pintype "passive")
+			(uuid "401855fc-a532-4533-8ea5-5e8617126c05")
+		)
+		(pad "2" smd rect
+			(at -3.159999 0 90)
+			(size 2 4)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(net 1 "GND")
+			(pinfunction "2")
+			(pintype "passive")
+			(uuid "9e304ce5-dab5-430d-a68b-ceff22416338")
+		)
+		(pad "2" smd rect
+			(at 3.159999 0 90)
+			(size 2 4)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 1 "GND")
+			(pinfunction "2")
+			(pintype "passive")
+			(uuid "dcd46dda-3e2e-4ef2-9d83-f52b750f808c")
+		)
+		(pad "2" smd rect
+			(at 3.159999 0 90)
+			(size 2 4)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(net 1 "GND")
+			(pinfunction "2")
+			(pintype "passive")
+			(uuid "cf204e9c-67a0-4faa-9980-588b134a80c0")
+		)
+		(embedded_fonts no)
+		(model "${DW_3D_MODELS}/Conn_SMA_BWSMA-KE-P001.step"
+			(offset
+				(xyz 0 -1.8 0.5)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
+	)
+	(footprint "DW-footprints:C_0402_1005Metric"
+		(layer "F.Cu")
+		(uuid "3949a3f9-80f8-4f46-a9d9-90e2cc50e958")
+		(at 130.05 105.5 90)
+		(descr "Capacitor SMD 0402")
+		(tags "capacitor SMD 0402")
+		(property "Reference" "C1"
+			(at -0.95 0.45 90)
+			(layer "F.SilkS")
+			(uuid "8b66ef35-7933-4fa8-b23a-af43d75dd677")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Value" "C-0402-template"
+			(at 1 1.27 90)
+			(layer "F.Fab")
+			(uuid "7459a5db-264b-43aa-97e4-883bd08a1804")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Datasheet" "Datasheet"
+			(at 0 0 90)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f9419639-e207-4f05-b47a-4ac1918a10f2")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Description" "Description"
+			(at 0 0 90)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2e1c2366-90bc-4575-9a87-58747b29e747")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Manufacturer" "MFR"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6d34bb4f-02d7-4fc6-97f7-ee70d47da28f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "MPN"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "22427f94-8bb1-4f73-93b8-1677df66439c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "#LCSC"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a017270e-69e9-483a-81e7-af4d6eff49b9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Val" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "afc97e67-84ae-40e2-9e19-f7f48e5c3e0b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Tolerance" "Tolerance"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4fc2fd09-1330-450e-ad0e-91ae81809010")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Voltage" "Voltage"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2bfeeb13-7e9c-4370-a9f3-ced61f6a8f7c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Dielectric" "Dielectric"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d5e62388-bd28-4e22-930a-9f60e1af7cbe")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/f475cad0-25de-4597-91c3-8d0c9db94df8")
+		(sheetname "/")
+		(sheetfile "wifi-ble-antenna.kicad_sch")
+		(attr smd exclude_from_bom dnp)
+		(fp_poly
+			(pts
+				(xy -0.95 -0.5) (xy 0.95 -0.5) (xy 0.95 0.5) (xy -0.95 0.5)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "eeeff332-2569-40a6-805c-199574c0497c")
+		)
+		(fp_poly
+			(pts
+				(xy -0.5 -0.25) (xy 0.5 -0.25) (xy 0.5 0.25) (xy -0.5 0.25)
+			)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "4d90abbe-789f-4f42-aafd-1f5c53c4bf61")
+		)
+		(pad "1" smd roundrect
+			(at -0.499999 0 90)
+			(size 0.6 0.7)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 1 "GND")
+			(pintype "passive")
+			(uuid "02d99773-b334-447b-9b93-a0592456991b")
+		)
+		(pad "2" smd roundrect
+			(at 0.499999 0 90)
+			(size 0.6 0.7)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 2 "Net-(C1-Pad2)")
+			(pintype "passive")
+			(uuid "35caa0d9-06bd-4bd7-84d3-84f781cd7848")
+		)
+		(embedded_fonts no)
+		(model "${DW_3D_MODELS}/C_0402_1005Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "DW-footprints:Antenna_Custom_IFA_2.4GHz"
+		(layer "F.Cu")
+		(uuid "843920ee-e979-461f-9a2a-eb42f932624d")
+		(at 137.125 101.1 -90)
+		(descr "2.4GHz PCB Inverted-F Antenna")
+		(property "Reference" "E1"
+			(at 12.4 -0.25 90)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "0d2fc62b-4c69-4943-970a-f6e48f6788e0")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify right top)
+			)
+		)
+		(property "Value" "IFA_2.4GHz"
+			(at 12.4 1.02 90)
+			(layer "F.Fab")
+			(uuid "5f4d829b-8260-4c75-8cf5-d66fcb663823")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify right top)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 90)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "083d3f91-86e6-4f4d-9f3a-1361db923530")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify right top)
+			)
+		)
+		(property "Description" "2.4GHz PCB Inverted-F Antenna"
+			(at 0 0 90)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3dbccaf1-0119-4668-a002-1a2b5da22f3e")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify right top)
+			)
+		)
+		(path "/c3110661-389d-426f-9465-a005c5c3ba4e")
+		(sheetname "/")
+		(sheetfile "wifi-ble-antenna.kicad_sch")
+		(attr smd exclude_from_pos_files)
+		(fp_poly
+			(pts
+				(xy 11.849999 -5.15) (xy 11.85 -4.65) (xy 0.25 -4.65) (xy 0.25 0.25) (xy -0.25 0.25) (xy -0.25 -4.65)
+				(xy -1.65 -4.65) (xy -1.65 0.25) (xy -2.55 0.25) (xy -2.55 0.006785) (xy -2.247583 0.006785) (xy -2.237742 0.054396)
+				(xy -2.213674 0.096797) (xy -2.175732 0.129581) (xy -2.167819 0.133935) (xy -2.125156 0.146043)
+				(xy -2.076637 0.145301) (xy -2.031122 0.1324) (xy -2.012511 0.121787) (xy -1.978868 0.086553) (xy -1.958309 0.041368)
+				(xy -1.951778 -0.008158) (xy -1.960218 -0.056417) (xy -1.977112 -0.088643) (xy -2.012372 -0.121313)
+				(xy -2.057681 -0.141408) (xy -2.107267 -0.147982) (xy -2.155353 -0.140092) (xy -2.188245 -0.123186)
+				(xy -2.223185 -0.086416) (xy -2.242847 -0.041622) (xy -2.247583 0.006785) (xy -2.55 0.006785) (xy -2.55 -5.15)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill yes)
+			(layer "F.Cu")
+			(uuid "bc3cf551-442f-4eef-a349-f6d0ccac846f")
+		)
+		(fp_line
+			(start -3.2 0.35)
+			(end -3.2 -5.6)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "a18b779a-7687-4a4a-9d17-d09d036fae54")
+		)
+		(fp_line
+			(start 12.3 0.35)
+			(end -3.2 0.35)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "6cc9bdf3-ee64-447f-85e5-b6573c5422be")
+		)
+		(fp_line
+			(start -3.2 -5.6)
+			(end 12.299999 -5.6)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "3972e752-1433-4cf4-865a-5f58750dff5f")
+		)
+		(fp_line
+			(start 12.299999 -5.6)
+			(end 12.3 0.35)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "5034aa49-d3da-4779-be82-cb35aa9f04e5")
+		)
+		(fp_line
+			(start -3.2 0.35)
+			(end -3.2 -5.6)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "83b3c9ce-da76-429f-83c2-ab259c7e3b1f")
+		)
+		(fp_line
+			(start 12.3 0.35)
+			(end -3.2 0.35)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "d43e8da3-edef-41ce-84ba-93a270518eb5")
+		)
+		(fp_line
+			(start -3.2 -5.6)
+			(end 12.299999 -5.6)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "cc265dc3-2164-4a20-9500-2e966f424716")
+		)
+		(fp_line
+			(start 12.299999 -5.6)
+			(end 12.3 0.35)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "21b11203-378a-4f56-97fc-e891622760a4")
+		)
+		(pad "1" connect rect
+			(at 0 0 270)
+			(size 0.5 0.5)
+			(layers "F.Cu")
+			(net 3 "Net-(E1-SIG)")
+			(pinfunction "SIG")
+			(pintype "passive")
+			(uuid "aac630f2-a86d-43bf-8d96-dfec90b412ef")
+		)
+		(pad "2" thru_hole rect
+			(at -2.1 0 270)
+			(size 0.9 0.5)
+			(drill 0.3)
+			(layers "*.Cu")
+			(remove_unused_layers no)
+			(net 1 "GND")
+			(pinfunction "GND")
+			(pintype "passive")
+			(zone_connect 2)
+			(uuid "1c00e441-80fe-4cb3-9cab-1c3886812e28")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "DW-footprints:R_0402_1005Metric"
+		(layer "F.Cu")
+		(uuid "9426b33a-6923-41ab-a690-3508de87b955")
+		(at 131.55 105)
+		(descr "Resistor SMD 0402")
+		(tags "resistor SMD 0402")
+		(property "Reference" "R2"
+			(at -0.7 -0.55 0)
+			(layer "F.SilkS")
+			(uuid "4a9be239-51a4-4a60-a223-b227fe590c34")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "R-0R-0402"
+			(at 1 1.27 0)
+			(layer "F.Fab")
+			(uuid "7f0f512c-fdfc-428f-8f08-554115da37ab")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-0402WGF0000TCE_C17168.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "06d94782-d122-4ea3-bab5-a36a798215bb")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Description" "62.5mW Thick Film Resistor 50V ±800ppm/℃ ±1% 0Ω 0402 Chip Resistor - Surface Mount ROHS"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6ba125f9-8018-4313-ac3c-a9ddd7073347")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1a4adf11-4d32-4d4f-b904-eb2e8cdb0fcf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "0402WGF0000TCE"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2a3ae195-5b35-402e-bf1f-e7d45abe3576")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C17168"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5b88692a-f93d-44c9-935c-054552cc0905")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Val" "0R"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "93d6b338-57e8-4c91-bded-4762071f775f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5fba2368-a562-4c3d-946a-3b9b4f8e40de")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/ad977645-5b5d-41c3-8f78-e4bac7827ef5")
+		(sheetname "/")
+		(sheetfile "wifi-ble-antenna.kicad_sch")
+		(attr smd)
+		(fp_rect
+			(start -0.95 -0.5)
+			(end 0.95 0.5)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "bec25173-e64f-4f41-ad58-5878e1a5f04d")
+		)
+		(fp_rect
+			(start -0.5 -0.25)
+			(end 0.5 0.25)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "2441b411-99d4-4689-80e9-440d5ffcc62c")
+		)
+		(pad "1" smd roundrect
+			(at -0.5 0)
+			(size 0.6 0.7)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 2 "Net-(C1-Pad2)")
+			(pintype "passive")
+			(uuid "b8efe5ae-d5a8-4642-a96a-cec5401a413d")
+		)
+		(pad "2" smd roundrect
+			(at 0.5 0)
+			(size 0.6 0.7)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 3 "Net-(E1-SIG)")
+			(pintype "passive")
+			(uuid "0ab6b00e-1d12-4f51-b209-718d0039c77d")
+		)
+		(embedded_fonts no)
+		(model "${DW_3D_MODELS}/R_0402_1005Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "DW-footprints:C_0402_1005Metric"
+		(layer "F.Cu")
+		(uuid "be5fa27e-c68d-443c-8d66-4c1c6ba1fa1d")
+		(at 133.05 105.5 90)
+		(descr "Capacitor SMD 0402")
+		(tags "capacitor SMD 0402")
+		(property "Reference" "C2"
+			(at -0.95 0.45 90)
+			(layer "F.SilkS")
+			(uuid "ecb0d474-a7d3-47e6-85bb-6189be3d08cd")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Value" "C-0402-template"
+			(at 1 1.27 90)
+			(layer "F.Fab")
+			(uuid "792bb548-2f75-4aed-adf0-fb154f6818fe")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Datasheet" "Datasheet"
+			(at 0 0 90)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5c7ad69e-0e55-4ccf-8a21-41797cb707f6")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Description" "Description"
+			(at 0 0 90)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bcff8e8e-1d8f-4ff4-aeea-da561a0837e8")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Manufacturer" "MFR"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "80b802c3-b1f6-4e40-8f60-198a4b1baea4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "MPN"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8cc36134-ef07-4f18-ba2c-b4ef68cd371e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "#LCSC"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6c63057c-a71b-462f-8791-a23ffc4e63ff")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Val" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0a2ebccd-5a49-44f8-a796-9d61d3c1c886")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Tolerance" "Tolerance"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "58a5174c-96a0-45d9-be86-dc5528f897bb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Voltage" "Voltage"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "032e11e1-e373-4e24-8541-8fe3fb48c67f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Dielectric" "Dielectric"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3c529c6f-6726-4121-b32e-f85fc0f6a6b7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/1d26a5fa-cc86-40a6-86af-2e8dce882ca0")
+		(sheetname "/")
+		(sheetfile "wifi-ble-antenna.kicad_sch")
+		(attr smd exclude_from_bom dnp)
+		(fp_poly
+			(pts
+				(xy -0.95 -0.5) (xy 0.95 -0.5) (xy 0.95 0.5) (xy -0.95 0.5)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "40c37be3-5431-4afc-9f06-f5a00baae73d")
+		)
+		(fp_poly
+			(pts
+				(xy -0.5 -0.25) (xy 0.5 -0.25) (xy 0.5 0.25) (xy -0.5 0.25)
+			)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "96a78ccf-4b35-4203-bdfc-1a413b12bc21")
+		)
+		(pad "1" smd roundrect
+			(at -0.499999 0 90)
+			(size 0.6 0.7)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 1 "GND")
+			(pintype "passive")
+			(uuid "5f264fec-2d06-4d40-8f6b-48432fb41d40")
+		)
+		(pad "2" smd roundrect
+			(at 0.499999 0 90)
+			(size 0.6 0.7)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 3 "Net-(E1-SIG)")
+			(pintype "passive")
+			(uuid "bdcef46b-28c3-48b0-8e7c-7b6c56849ab5")
+		)
+		(embedded_fonts no)
+		(model "${DW_3D_MODELS}/C_0402_1005Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "DW-footprints:R_0402_1005Metric"
+		(layer "F.Cu")
+		(uuid "f2ffa0e9-d9b2-4c01-8658-b22ec3a51eea")
+		(at 128.55 105)
+		(descr "Resistor SMD 0402")
+		(tags "resistor SMD 0402")
+		(property "Reference" "R1"
+			(at -0.75 -0.55 0)
+			(layer "F.SilkS")
+			(uuid "fbc3bb96-c925-4688-936b-4443c10c4172")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "R-0R-0402"
+			(at 1 1.27 0)
+			(layer "F.Fab")
+			(uuid "55ba3438-7776-4976-b8d4-32d173fb2e67")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-0402WGF0000TCE_C17168.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5a6a9f6e-46a3-4965-a08d-f2f20d1af8a4")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Description" "62.5mW Thick Film Resistor 50V ±800ppm/℃ ±1% 0Ω 0402 Chip Resistor - Surface Mount ROHS"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "621083c8-0e56-4699-9e12-f4a3e4c10c2b")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "63fb35b4-5299-4a50-b2fc-7ea8ba0d370c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "0402WGF0000TCE"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d26c0744-2118-4bb0-bf12-f52765f1366b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C17168"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "182fc252-f5d7-468e-bcf1-5059068ca43f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Val" "0R"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e79c97d9-6854-4320-9cb4-066b9e05af2f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4eac46ff-b6bb-48e8-9c62-8072e7e1852c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/0fcfe0a6-5d46-428e-8727-cc8de8673a68")
+		(sheetname "/")
+		(sheetfile "wifi-ble-antenna.kicad_sch")
+		(attr smd)
+		(fp_rect
+			(start -0.95 -0.5)
+			(end 0.95 0.5)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "6299a326-8995-4b9f-ac13-df11f4211636")
+		)
+		(fp_rect
+			(start -0.5 -0.25)
+			(end 0.5 0.25)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "9838a172-7351-4811-9463-699532d24c4d")
+		)
+		(pad "1" smd roundrect
+			(at -0.5 0)
+			(size 0.6 0.7)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 4 "Net-(J1-Pad1)")
+			(pintype "passive")
+			(uuid "edc373be-c9fe-4a02-87e5-ddb68e65338b")
+		)
+		(pad "2" smd roundrect
+			(at 0.5 0)
+			(size 0.6 0.7)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 2 "Net-(C1-Pad2)")
+			(pintype "passive")
+			(uuid "b0edf23e-f4bb-4fb5-be07-f6c8f6d5dc6e")
+		)
+		(embedded_fonts no)
+		(model "${DW_3D_MODELS}/R_0402_1005Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(gr_poly
+		(pts
+			(xy 125.7 104.825375) (xy 124.2 104.11) (xy 124.2 105.89) (xy 125.7 105.174625)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Cu")
+		(net 4)
+		(uuid "0643e496-ec64-4311-84d8-2e594e16f74d")
+	)
+	(gr_rect
+		(start 120 90)
+		(end 150 120)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "Edge.Cuts")
+		(uuid "d787a505-b890-4aa6-be92-56437a7327bc")
+	)
+	(gr_text "PROJECT  Rev. ${REVISION}\nBRD SHA: %%%%%%%%\nDate: ${CURRENT_DATE}"
+		(at 121 119 0)
+		(layer "F.SilkS")
+		(uuid "fea3d911-222b-4160-b15a-a60ce5ec83a1")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(via
+		(at 122.2 108.159999)
+		(size 0.6)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(net 1)
+		(uuid "309c3fd2-2090-4832-af6c-0c826ce81a4b")
+	)
+	(via
+		(at 133.05 105.999999)
+		(size 0.6)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(net 1)
+		(uuid "864ec8b0-d551-4415-9f2e-ab10b8580a76")
+	)
+	(via
+		(at 122.2 101.840001)
+		(size 0.6)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(net 1)
+		(uuid "98ee3c8d-65b7-4894-ac14-6e56dc622d31")
+	)
+	(via
+		(at 130.05 105.999999)
+		(size 0.6)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(net 1)
+		(uuid "df88ffb3-718e-4cb8-8ddd-dde730ef34f2")
+	)
+	(segment
+		(start 130.05 105.000001)
+		(end 131.05 105)
+		(width 0.3493)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "10514886-d9d1-4bc2-915f-671b676295ef")
+	)
+	(segment
+		(start 129.05 105)
+		(end 130.05 105.000001)
+		(width 0.3493)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "e480683d-b8da-44bb-bcd0-756b64a1c7dc")
+	)
+	(segment
+		(start 132.05 105)
+		(end 133.05 105.000001)
+		(width 0.3493)
+		(layer "F.Cu")
+		(net 3)
+		(uuid "4166a356-6575-4bfb-857c-051ae5bfac85")
+	)
+	(segment
+		(start 133.999999 105.000001)
+		(end 134 105)
+		(width 0.3493)
+		(layer "F.Cu")
+		(net 3)
+		(uuid "abab6c2c-7b1d-427c-8d14-f3e3d2f341dd")
+	)
+	(segment
+		(start 133.05 105.000001)
+		(end 133.999999 105.000001)
+		(width 0.3493)
+		(layer "F.Cu")
+		(net 3)
+		(uuid "f2d38c35-70dd-45ef-8847-e1e5975c33bf")
+	)
+	(segment
+		(start 122.2 105)
+		(end 128.05 105)
+		(width 0.3493)
+		(layer "F.Cu")
+		(net 4)
+		(uuid "7ee436d6-b3d6-4b7b-abcc-bff4bb3f8e7a")
+	)
+	(zone
+		(net 1)
+		(net_name "GND")
+		(layer "In1.Cu")
+		(uuid "2b33fb9e-d56b-4305-94b7-54f884f5f616")
+		(hatch edge 0.5)
+		(connect_pads yes
+			(clearance 0.3)
+		)
+		(min_thickness 0.2)
+		(filled_areas_thickness no)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy 120 130) (xy 140.15 130) (xy 140.15 80) (xy 120 80)
+			)
+		)
+	)
 	(embedded_fonts no)
 )

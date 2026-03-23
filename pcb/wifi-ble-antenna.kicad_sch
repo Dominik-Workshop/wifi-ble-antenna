@@ -422,7 +422,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "DW-mechanical:PCB_antenna_2.4GHz"
+		(symbol "DW-mechanical:IFA_2.4GHz"
 			(pin_numbers
 				(hide yes)
 			)
@@ -433,7 +433,7 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "E"
-				(at 2.54 0 0)
+				(at 8.89 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -442,8 +442,8 @@
 					(justify left bottom)
 				)
 			)
-			(property "Value" "PCB_antenna_2.4GHz"
-				(at 2.54 -2.54 0)
+			(property "Value" "IFA_2.4GHz"
+				(at 8.89 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -452,8 +452,8 @@
 					(justify left bottom)
 				)
 			)
-			(property "Footprint" ""
-				(at 2.54 -5.08 0)
+			(property "Footprint" "DW-footprints:Antenna_Custom_IFA_2.4GHz"
+				(at 8.89 -5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -474,8 +474,8 @@
 					(hide yes)
 				)
 			)
-			(property "Description" ""
-				(at 2.54 -10.16 0)
+			(property "Description" "2.4GHz PCB Inverted-F Antenna"
+				(at 8.89 -10.16 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -485,49 +485,74 @@
 					(hide yes)
 				)
 			)
-			(symbol "PCB_antenna_2.4GHz_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -1.27)
+			(property "ki_keywords" "ANTENNA, PCB"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
 					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.27) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.27) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
+					(hide yes)
 				)
 			)
-			(symbol "PCB_antenna_2.4GHz_1_1"
+			(symbol "IFA_2.4GHz_1_1"
+				(polyline
+					(pts
+						(xy -2.54 1.27) (xy 7.62 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(pin passive line
-					(at 0 -2.54 90)
+					(at -2.54 -1.27 90)
 					(length 1.27)
-					(name "1"
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -1.27 90)
+					(length 1.27)
+					(name "SIG"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -853,6 +878,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 63.5) (xy 132.08 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1dba4257-7188-492c-adab-314f53c32791")
+	)
+	(wire
+		(pts
 			(xy 76.2 69.85) (xy 76.2 77.47)
 		)
 		(stroke
@@ -863,13 +898,13 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 63.5) (xy 123.19 66.04)
+			(xy 129.54 66.04) (xy 129.54 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3b325068-6447-4101-9dae-3ed0645fd942")
+		(uuid "683edaa1-3c8a-48d9-8955-46f329d71a7a")
 	)
 	(wire
 		(pts
@@ -923,16 +958,6 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 66.04) (xy 123.19 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca1bb9f4-ad67-40db-8b94-0d69a56f0e44")
-	)
-	(wire
-		(pts
 			(xy 97.79 66.04) (xy 97.79 69.85)
 		)
 		(stroke
@@ -960,6 +985,16 @@
 			(type default)
 		)
 		(uuid "f44843d6-d8bf-4f48-9e98-0b7c50145e33")
+	)
+	(wire
+		(pts
+			(xy 110.49 66.04) (xy 129.54 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff74bb3d-4063-425e-aa6d-c387f679c38c")
 	)
 	(symbol
 		(lib_id "DW-resistors:R-0R-0402")
@@ -1247,6 +1282,71 @@
 	)
 	(symbol
 		(lib_id "DW-power-symbols:GND")
+		(at 132.08 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3dea9fc5-a23c-4b5e-ac90-0005a674d57e")
+		(property "Reference" "#PWR04"
+			(at 132.08 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 132.08 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 132.08 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 132.08 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a546f9a6-d607-4b5f-b2bf-c5da9a9759f7")
+		)
+		(instances
+			(project "wifi-ble-antenna"
+				(path "/15beafc1-24d5-45e3-95c8-dabbbcd946d2"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DW-power-symbols:GND")
 		(at 76.2 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1305,81 +1405,6 @@
 			(project "wifi-ble-antenna"
 				(path "/15beafc1-24d5-45e3-95c8-dabbbcd946d2"
 					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "DW-mechanical:PCB_antenna_2.4GHz")
-		(at 123.19 60.96 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "98649a9c-ea62-40a8-8682-f0392d20d349")
-		(property "Reference" "E1"
-			(at 125.73 60.325 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "PCB_antenna_2.4GHz"
-			(at 125.73 62.865 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 125.73 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 125.73 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 125.73 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2590ea8f-21db-4c33-8954-1f0595d90a77")
-		)
-		(instances
-			(project ""
-				(path "/15beafc1-24d5-45e3-95c8-dabbbcd946d2"
-					(reference "E1")
 					(unit 1)
 				)
 			)
@@ -1750,6 +1775,82 @@
 			(project ""
 				(path "/15beafc1-24d5-45e3-95c8-dabbbcd946d2"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DW-mechanical:IFA_2.4GHz")
+		(at 129.54 62.23 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c3110661-389d-426f-9465-a005c5c3ba4e")
+		(property "Reference" "E1"
+			(at 127 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "IFA_2.4GHz"
+			(at 127 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "DW-footprints:Antenna_Custom_IFA_2.4GHz"
+			(at 124.46 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Description" "2.4GHz PCB Inverted-F Antenna"
+			(at 124.46 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a0f4019d-c1b3-4964-9fc8-611d4dfa91f0")
+		)
+		(pin "2"
+			(uuid "18244f58-023b-4bcd-9890-a3bed282fb61")
+		)
+		(instances
+			(project ""
+				(path "/15beafc1-24d5-45e3-95c8-dabbbcd946d2"
+					(reference "E1")
 					(unit 1)
 				)
 			)
