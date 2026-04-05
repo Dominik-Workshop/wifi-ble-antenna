@@ -1520,6 +1520,19 @@
 		(net 4)
 		(uuid "6c499299-34cf-40db-b87c-946c09371468")
 	)
+	(gr_poly
+		(pts
+			(xy 138.35 88.5) (xy 139.15 88.5) (xy 139.15 83) (xy 144.15 83) (xy 144.15 88.5) (xy 144.65 88.5)
+			(xy 144.65 83) (xy 161.65 83) (xy 161.65 82) (xy 138.35 82)
+		)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Mask")
+		(uuid "68891ed4-8a7f-49e2-b191-87a041c24b0a")
+	)
 	(gr_line
 		(start 132.1 107)
 		(end 143.6 107)
