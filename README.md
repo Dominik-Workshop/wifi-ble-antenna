@@ -1,7 +1,10 @@
 # WiFi BLE Antenna
 
-> [!WARNING]  
-> WORK IN PROGRESS
+[![License](https://img.shields.io/github/license/Dominik-Workshop/wifi-ble-antenna)](https://github.com/Dominik-Workshop/wifi-ble-antenna/blob/main/LICENSE) ![Repo Size](https://img.shields.io/github/repo-size/Dominik-Workshop/wifi-ble-antenna)
+
+<p align="center">
+  <img align="center" width="70%" src="img/pcb-render-top.png" alt="Hero image">
+</p>
 
 ## Antenna Design
 
@@ -71,3 +74,9 @@ Surface current distribution along the antenna traces at the target resonance:
   <img align="center" width="45%" src="img/AZ-pattern.png" alt="Azimuth Pattern"/>
   <img align="center" width="45%" src="img/EL-pattern.png" alt="Elevation Pattern"/>
 </p>
+
+## Project Status
+
+**Design:** ✅ --> **Fabrication & Assembly:** ❌ --> **Bring-up:** ❌
+
+The design is currently **untested and unverified**. Use at your own risk.
