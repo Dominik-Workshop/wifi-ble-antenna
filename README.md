@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/github/license/Dominik-Workshop/wifi-ble-antenna)](https://github.com/Dominik-Workshop/wifi-ble-antenna/blob/main/LICENSE) ![Repo Size](https://img.shields.io/github/repo-size/Dominik-Workshop/wifi-ble-antenna)
 
 <p align="center">
-  <img align="center" width="70%" src="img/pcb-render-top.png" alt="Hero image">
+  <img align="center" width="50%" src="img/pcb-render-top.png" alt="Hero image">
 </p>
 
 ## Antenna Design
