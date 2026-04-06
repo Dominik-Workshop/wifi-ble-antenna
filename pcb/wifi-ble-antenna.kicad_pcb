@@ -654,7 +654,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Datasheet" "https://github.com/Dominik-Workshop/wifi-ble-antenna"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -667,7 +667,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "2.4GHz PCB Inverted-F Antenna"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
