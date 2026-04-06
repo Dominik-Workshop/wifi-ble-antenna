@@ -77,6 +77,6 @@ Surface current distribution along the antenna traces at the target resonance:
 
 ## Project Status
 
-**Design:** ✅ --> **Fabrication & Assembly:** ❌ --> **Bring-up:** ❌
+**Design:** ✅ --> **Fabrication & Assembly:** ⌛ --> **Bring-up:** ❌
 
 The design is currently **untested and unverified**. Use at your own risk.
