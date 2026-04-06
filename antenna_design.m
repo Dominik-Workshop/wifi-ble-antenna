@@ -1,16 +1,16 @@
 %%Create Variables
-D1 = 2;
+D1 = 9;
 D2 = 2;
-D3 = 2;
-D4 = 2;
-D5 = 20;
+D3 = 9;
+D4 = 5;
+D5 = 17;
 D6 = 0.5;
-D7 = 40;
-W1 = 0.5;
+D7 = 34.5;
+W1 = 0.8;
 W2 = 0.5;
 W3 = 1;
-L1 = 5;
-L2 = 5;
+L1 = 5.5;
+L2 = 5.5;
 L3 = W1+D4+W2+D5;
 PCBwidth = D7+L1-D6+W3+D2;
 PCBlength = D1+L3+D3;
@@ -71,32 +71,29 @@ pcbobj.BoardShape = BoardShape;
     %Creating DielectricLayer2 dielectric layer.
     DielectricLayer2 = dielectric("Name",'Custom',"EpsilonR",4.6,"LossTangent",0.026,"Thickness",0.001065);
     %Creating In2_Cu metal layer.
-        %Creating Rectangle7 shape.
-        Rectangle7 = antenna.Rectangle;
-        Rectangle7.Name = "Rectangle7";
-        Rectangle7.Center = [0.0128435 -0.0384575];
-        Rectangle7.Length = 0.009595;
-        Rectangle7.Width = 0.001999;
-        Rectangle7 = rotate(Rectangle7,0,[Rectangle7.Center,-1],[Rectangle7.Center,1]);
-    In2_Cu = Rectangle7;
+        %Creating GND shape.
+        GND = antenna.Rectangle;
+        GND.Name = "GND";
+        GND.Center = ([PCBlength/2,-D7/2+CopperToEdgeClearance/2]).*0.001;
+        GND.Length = (PCBlength-2*CopperToEdgeClearance).*0.001;
+        GND.Width = (D7-CopperToEdgeClearance).*0.001;
+        GND = rotate(GND,0,[GND.Center,-1],[GND.Center,1]);
+    In2_Cu = GND;
     %Creating DielectricLayer3 dielectric layer.
     DielectricLayer3 = dielectric("Name",'Custom',"EpsilonR",4.4,"LossTangent",0.026,"Thickness",0.0002104);
-    %Creating B_Cu metal layer.
-        %Creating Rectangle6 shape.
-        Rectangle6 = antenna.Rectangle;
-        Rectangle6.Name = "Rectangle6";
-        Rectangle6.Center = [0.012976 -0.037225];
-        Rectangle6.Length = 0.003998;
-        Rectangle6.Width = 0.000866;
-        Rectangle6 = rotate(Rectangle6,0,[Rectangle6.Center,-1],[Rectangle6.Center,1]);
-    B_Cu = Rectangle6;
 
 %%Create Feed
 feedloc = [[D1+W1+D4+W2/2,L1-D6-L2+(W2/2)].*0.001,[1 3];...
     ];
 
 %%Create Via
-vialoc = [[D1+W1/2,-D6/2].*0.001,[1 3];...
+vialoc = [[(D1+W1/2)-5,-(D6/2)-5].*0.001,[3 5];...
+[(D1+W1/2),-(D6/2)-5].*0.001,[3 5];...
+[(D1+W1/2),-(D6/2)-10].*0.001,[3 5];...
+[(D1+W1/2)+5,-(D6/2)-5].*0.001,[3 5];...
+[(D1+W1/2)-5,-(D6/2)-10].*0.001,[3 5];...
+[(D1+W1/2)+5,-(D6/2)-10].*0.001,[3 5];...
+[D1+W1/2,-D6/2].*0.001,[1 3]
     ];
 
 %%Create Metal
@@ -109,7 +106,7 @@ pcbobj.Conductor = metalobj;
 
 %%Assign properties
 pcbobj.BoardThickness = 0.0014858;
-pcbobj.Layers = {F_Cu,DielectricLayer1,In1_Cu,DielectricLayer2,In2_Cu,DielectricLayer3,B_Cu,};
+pcbobj.Layers = {F_Cu,DielectricLayer1,In1_Cu,DielectricLayer2,In2_Cu,DielectricLayer3,};
 pcbobj.FeedLocations = feedloc;
 pcbobj.FeedDiameter = 0.0005;
 pcbobj.ViaLocations = vialoc;
