@@ -1556,8 +1556,8 @@
 		(uuid "9683ab28-20a1-495d-9979-adb4081d8067")
 	)
 	(gr_line
-		(start 132.1 107)
-		(end 143.6 107)
+		(start 130.5 119.2)
+		(end 142 119.2)
 		(stroke
 			(width 0.1)
 			(type dash)
@@ -1566,8 +1566,8 @@
 		(uuid "0b66e008-df44-453f-9a20-3b7fd957bf63")
 	)
 	(gr_rect
-		(start 132.1 101.2)
-		(end 143.6 109.2)
+		(start 130.5 113.4)
+		(end 142 121.4)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -1577,8 +1577,8 @@
 		(uuid "98033d36-c030-4927-9af2-b9402a306b4a")
 	)
 	(gr_line
-		(start 132.1 103.4)
-		(end 143.6 103.4)
+		(start 130.5 115.6)
+		(end 142 115.6)
 		(stroke
 			(width 0.1)
 			(type dash)
@@ -1828,7 +1828,7 @@
 		(uuid "ade23f44-7410-44d4-8a3a-9c72b3abbe00")
 	)
 	(gr_text "Dominik Pluta"
-		(at 132.55 108.1 0)
+		(at 130.95 120.3 0)
 		(layer "F.SilkS")
 		(uuid "36811657-32f5-4dc2-9eb8-71cf5e65fd50")
 		(effects
@@ -1840,7 +1840,7 @@
 		)
 	)
 	(gr_text "WiFi BLE Antenna"
-		(at 132.55 102.4 0)
+		(at 130.95 114.6 0)
 		(layer "F.SilkS")
 		(uuid "3ed4fe74-75cd-4a9d-a1cd-1d9043017db8")
 		(effects
@@ -1852,7 +1852,7 @@
 		)
 	)
 	(gr_text "Rev. ${REVISION}\n${CURRENT_DATE}"
-		(at 132.55 105.1 0)
+		(at 130.95 117.3 0)
 		(layer "F.SilkS")
 		(uuid "fea3d911-222b-4160-b15a-a60ce5ec83a1")
 		(effects
