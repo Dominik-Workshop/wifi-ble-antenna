@@ -77,6 +77,7 @@ Surface current distribution along the antenna traces at the target resonance:
 
 ## Project Status
 
-**Design:** ✅ --> **Fabrication & Assembly:** ⌛ --> **Bring-up:** ❌
+**Design:** ✅ --> **Fabrication & Assembly:** ✅ --> **Bring-up & Tuning:** ⌛
 
-The design is currently **untested and unverified**. Use at your own risk.
+The project has been assembled and tested. It works, but still needs tuning to meet the target impedance and desired frequency range.
+(Note: manufacturing tolerances play a big role in antenna performance.)
